@@ -17,3 +17,27 @@ variable "sample_string1"  {
 output "sample_string1" {
   value="value of sample string=${var.sample_string}"
 }
+
+
+# different data type
+variable "sample_numer" {
+  default =100
+}
+variable "sample_boolean" {
+  default =yes
+}
+
+#variable types
+#list
+variable "sample_list" {
+  default = [
+    100,
+    "Hello",
+    true,
+    123
+  ]
+}
+
+output "sample_list2"{
+  value=var.sample_list[2]
+}
