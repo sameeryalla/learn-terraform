@@ -41,3 +41,18 @@ variable "sample_list" {
 output "sample_list2"{
   value=var.sample_list[1]
 }
+
+
+
+#dictonary/MAP
+variable "sample_dict" {
+  default={
+    number1= 100
+    string1="Hello"
+    boolean=true
+    number2=123
+  }
+}
+output "sample_dict" {
+  value = "value from dictopnary is ${var.sample_dict.number2}"
+}
