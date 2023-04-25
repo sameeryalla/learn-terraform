@@ -24,7 +24,7 @@ variable "sample_numer" {
   default =100
 }
 variable "sample_boolean" {
-  default =yes
+  default =true
 }
 
 #variable types
