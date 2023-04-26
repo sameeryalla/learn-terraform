@@ -21,6 +21,7 @@ output "sample_list2"{
 }
 
 
+
 output "sample_dict1" {
   value = "value from dictopnary is ${var.sample_dict.number2}"
 }
@@ -30,3 +31,6 @@ output "sample_dict2" {
 }
 
 
+output "env"{
+  value=var.env
+}
