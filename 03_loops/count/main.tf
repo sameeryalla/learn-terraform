@@ -3,7 +3,7 @@ resource "null_resource" "null" {
 }
 
 variable "fruits" {
-   value=[ "Mango","Apple","Banana" ]
+   default=[ "Mango","Apple","Banana" ]
 }
 
 resource "null_resource" "fruits" {
