@@ -14,3 +14,9 @@ output "security_group_id"{
 output "security_group_provider"{
   value=data.aws_security_group.selected.provider
 }
+
+#all aws_security_group
+data "aws_security_groups" "groupsList"{}
+output "groupsList" {
+  value=data.aws_security_groups.groupsList
+}
