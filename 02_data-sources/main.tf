@@ -18,7 +18,7 @@ output "security_group_vpc"{
 #all aws_security_group
 data "aws_security_groups" "groupsList"{}
 output "groupsList" {
-  value="list of security groups is : ${data.aws_security_groups.groupsList}"
+  value=data.aws_security_groups.groupsList
 }
 
 
