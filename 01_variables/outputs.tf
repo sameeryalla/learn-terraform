@@ -10,7 +10,7 @@ output "sample_string1" {
 
 
 ##in the above case we are printing just variable, if variable is combination of some strings then following is the syntax
-#${} is mandatory to include variavble in between a string
+#${} is mandatory to include variable in between a string
 
 output "sample_string2" {
   value="value of sample string=${var.sample_string}"
