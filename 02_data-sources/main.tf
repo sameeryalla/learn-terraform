@@ -25,7 +25,7 @@ output "groupsList" {
 # using count loop to get the attributes of each security group
 data "aws_security_groups" "single"{
   count=length(data.aws_security_groups.single.ids)
-  value=data.aws_security_groups.single.ids[count.index]
+  id=data.aws_security_groups.single.ids[count.index]
 }
 
 output "single"{
