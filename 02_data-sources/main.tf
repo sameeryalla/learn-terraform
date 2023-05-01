@@ -11,8 +11,8 @@ output "security_group_id"{
   value=data.aws_security_group.selected.id
 }
 
-output "security_group_provider"{
-  value=data.aws_security_group.selected.provider
+output "security_group_vpc"{
+  value=data.aws_security_group.selected.vpc_id
 }
 
 #all aws_security_group
