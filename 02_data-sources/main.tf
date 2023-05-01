@@ -18,5 +18,16 @@ output "security_group_vpc"{
 #all aws_security_group
 data "aws_security_groups" "groupsList"{}
 output "groupsList" {
-  value=data.aws_security_groups.groupsList
+  value="list of security groups is : ${data.aws_security_groups.groupsList}"
+}
+
+
+# using count loop to get the attributes of each security group
+data "aws_security_groups" "single"{
+  count=length(data.aws_security_groups.single.ids)
+  value=data.aws_security_groups.single.ids[count.index]
+}
+
+output "single"{
+  value=data.aws_security_groups.single
 }
