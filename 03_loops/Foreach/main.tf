@@ -24,6 +24,9 @@ variable "fruits2" {
     banana = {name="Banana"
     count=100
     }
+    grapes = {name="Grapes"
+      count=100
+    }
   }
 }
 
