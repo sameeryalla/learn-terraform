@@ -19,10 +19,10 @@ variable "fruits2" {
     count=10
     }
     orange = {name="Orange"
-    count=10
+    count=25
     }
     banana = {name="Banana"
-    count=10
+    count=100
     }
   }
 }
