@@ -46,5 +46,17 @@ resource "null_resource" "fruitsdtl2" {
 #  }
 #}
 
+variable "fruitList"{
+  default=["Apple","Orange","Banana"]
+}
+
+resource "null_resource" "fruitlist"{
+  for_each = toset(var.fruitList)
+  provisioner "local-exec"{
+    command = "echo fruitname - ${each.key}"
+  }
+}
+
+
 
 
