@@ -1,8 +1,36 @@
-variable "fruits"{
+variable "fruits1"{
   default= {
       apple=10
       orange=25
       banana=100
+  }
+}
+
+resource "null_resource" "fruitsdtl" {
+  for_each = var.fruits1
+  provisioner "local-exec" {
+    command="echo fruitName = ${each.key} -  ${each.value}"
+  }
+}
+
+variable "fruits2" {
+  default = {
+    apple={name="Apple"
+    count=10
+    }
+    orange = {name="Orange"
+    count=10
+    }
+    banana = {name="Banana"
+    count=10
+    }
+  }
+}
+
+resource "null_resource" "fruitsdtl2" {
+  for_each = var.fruits2
+  provisioner "local-exec" {
+    command="echo fruitName = ${each.key} -  ${each.value[count]}"
   }
 }
 
@@ -15,9 +43,5 @@ variable "fruits"{
 #  }
 #}
 
-resource "null_resource" "fruitsdtl" {
-  for_each = var.fruits
-  provisioner "local-exec" {
-    command="echo fruitName = ${each.key} -  ${each.value}"
-  }
-}
+
+
