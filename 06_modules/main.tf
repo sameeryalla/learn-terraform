@@ -5,5 +5,4 @@ module "sample"{
 
 module "dummy"{
   source="./dummy"
-  input="DevOps"
 }
