@@ -1,0 +1,3 @@
+module "sample"{
+  source="./module"
+}
